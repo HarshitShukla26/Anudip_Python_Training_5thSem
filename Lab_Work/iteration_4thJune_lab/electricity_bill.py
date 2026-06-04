@@ -3,10 +3,10 @@ units=int(input("Enter the number of units consumed: "))
 
 if(units>0 and units<=100):
     bill=units*5
-    print("Electricity bill is: ",bill,"LOW CONSUMPTION")
+    print("Electricity bill is: ",bill,"Category: LOW CONSUMPTION")
 elif(units>100 and units<=200):
     bill=units*7
-    print("Electricity bill is: ",bill,"MODERATE CONSUMPTION")
+    print("Electricity bill is: ",bill,"Category: MODERATE CONSUMPTION")
 elif(units>200):
     bill=units*10
-    print("Electricity bill is: ",bill,"HIGH CONSUMPTION")
+    print("Electricity bill is: ",bill,"Category: HIGH CONSUMPTION")
