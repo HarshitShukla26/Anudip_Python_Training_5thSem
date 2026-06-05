@@ -1,3 +1,4 @@
+#given a list of students containing marks and on the basis of this perform the following operations
 marks=[78,45,92,35,88,40,99,56]
 #Display passed students
 print("Passed Students")
