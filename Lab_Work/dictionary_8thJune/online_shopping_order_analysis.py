@@ -11,58 +11,60 @@ sales = {
     "Router": 25
 }
 
-# 1. Products sold more than 20 times
+#TASK 1. Display products sold more than 20 times
 print("Products sold more than 20 times:")
 for product in sales:
-    if sales[product]>20:
+    if sales[product] > 20:
         print(product)
 
-#TASK 2: Best selling product
-for product in sales:
-    max_product=product
-    max_sales=sales[product]
-    break
+#TASK 2. Find the best-selling product
+dict_items = list(sales.items())
+
+best_product = dict_items[0][0]
+highest_sales = dict_items[0][1]
+
+for item in dict_items:
+    if item[1] > highest_sales:
+        best_product = item[0]
+        highest_sales = item[1]
+
+print("Best-selling product:", best_product)
+print("Sales:", highest_sales)
+
+#TASK 3. Find the least-selling product
+least_product = dict_items[0][0]
+lowest_sales = dict_items[0][1]
+
+for item in dict_items:
+    if item[1] < lowest_sales:
+        least_product = item[0]
+        lowest_sales = item[1]
+
+print("Least-selling product:", least_product)
+print("Sales:", lowest_sales)
+
+#TASK 4. Calculate total products sold
+total = 0
 
 for product in sales:
-    if sales[product]>max_sales:
-        max_sales=sales[product]
-        max_product=product
+    total += sales[product]
 
-print("Best-selling product",max_product)
+print("Total products sold:", total)
 
-#TASK 3: Least-selling product
+#TASK 5. Create a list of products requiring promotion
+promotion = []
+
 for product in sales:
-    min_product=product
-    min_sales=sales[product]
-    break
-
-# Find minimum
-for product in sales:
-    if sales[product]<min_sales:
-        min_sales=sales[product]
-        min_product=product
-
-print("Least-selling product",min_product)
-
-# TASK 4: Total products sold
-total=0
-for product in sales:
-    total=total+sales[product]
-
-print("Total products sold",total)
-
-# TASK 5: Crate a list of products requiring promotion
-promotion=[]
-for product in sales:
-    if sales[product]<15:
+    if sales[product] < 15:
         promotion.append(product)
 
-print("Products requiring promotion:",promotion)
+print("Products requiring promotion:", promotion)
 
-# TASK 6: Count products having sales between 10 and 30
-count=0
+#TASK 6. Count products having sales between 10 and 30
+count = 0
+
 for product in sales:
-    if sales[product]>=10 and sales[product]<=30:
-        count=count+1
+    if sales[product] >= 10 and sales[product] <= 30:
+        count += 1
 
-print("Products with sales between 10 and 30:",count)
+print("Products with sales between 10 and 30:", count)
