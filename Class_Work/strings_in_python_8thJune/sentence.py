@@ -1,3 +1,4 @@
+#WAP to input a sentence from user and count the number of special charaters present in the sentence
 sentence=input("enter a string")
 count=0
 for ch in sentence:
