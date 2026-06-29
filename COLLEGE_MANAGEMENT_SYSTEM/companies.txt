@@ -1,0 +1,5 @@
+Google,8.0,Python,20
+Microsoft,7.5,C++,18
+Amazon,7.0,Java,15
+Infosys,6.5,Python,6
+TCS,6.0,Java,5
